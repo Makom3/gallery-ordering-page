@@ -1,0 +1,71 @@
+<Doctype! html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallery-style.css">
+</head>
+<body>
+     <!-- Header Section -->
+    <section class="header" id="header">
+        <div class="header-content">
+            <h1>Ayse</h1>
+            <h2>Creative Media <span>And Print</span></h2>
+        
+            <p>Sublimation Coffee Mug Gallery</p>
+        </div>
+    <div class="links">
+            <a href="index.html">Home</a>
+            <a href="#galleryImage" onmouseover="goToSection('coffee-mugs')">Coffee Mugs</a>
+            <a href="#galleryImage2" onmouseover="goToSection('t-shirts')">Tshirts</a>
+            <a href="#key-holders" onmouseover="goToSection('key-holders')">Key holders</a>
+            <a href="#graphic-design" onmouseover="goToSection('graphic-design')">Graphic Design</a>
+            <a href="Order.html">Contact</a>
+        </div>   
+    </section>
+
+     <!-- information section -->
+    <section class="gallery-description">
+        <div class="description-content">
+            <h2>Welcome to Our Gallery</h2>  
+        <p>Explore our collection of beautifully designed mugs,
+             perfect for your morning coffee or as a thoughtful gift. Each mug is crafted with care and
+             showcases unique designs that reflect creativity and style. Browse through our gallery to find the 
+             perfect mug that suits your taste and personality.</p>
+        
+    </div>
+    </section>
+
+    <!-- gallery section -->
+    <section class="gallery">
+
+        
+        <div class="buttons">
+            <button class="prev" onclick="prevImage()">Prev</button>
+        </div>
+        <img id="galleryImage" src="img/sub-img01.jpg" alt="sublimation image">
+        
+        <div class="buttons">
+            <button class="next" onclick="nextImage()">Next</button>
+        </div>
+
+        <!-- gallery t-shirts -->
+        <div class="buttons">
+            <button class="prev" onclick="prevImage2()">Prev</button>
+        </div>
+        <img id="galleryImage2" src="img/tshirt-img01.jpg" alt="sublimation image">
+        
+        <div class="buttons">
+            <button class="next" onclick="nextImage2 ()">Next</button>
+        </div>
+        
+    </section>
+    
+    <section class="footer">
+        <p>&copy; 2023 Ayse Creative Media. All rights reserved.</p>
+    </section>
+    <script src="gallery-script.js"></script>
+</body>
+</html>

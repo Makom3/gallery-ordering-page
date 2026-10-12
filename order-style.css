@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color:rgba(0, 0, 0, 0.444);
+    color: #fff;white-space: nowrap;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.header{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c8c2afa7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+.header, .links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-right: 20px ;
+    gap: 10px;
+}
+.header h1{
+    font-size: 40px;
+    color:rgb(82, 73, 116);
+}
+.header .header-content .h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+.header span{
+    color: rgb(250, 250, 248);
+    font-weight: bold;
+}
+.header p{
+    font-size: 26px;
+    color: rgb(82, 73, 116);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header .links a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+.header .links a:hover{
+    color: rgb(240, 240, 240);
+    background-color: rgb(82, 73, 116);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.gallery-tshirt{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 40px auto; 
+}
+.gallery-item{
+    
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+    box-sizing: border-box;
+    width: 100%;
+    
+}
+.gallery-item img{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    display: flex;
+    margin: 20px auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid rgb(116, 109, 109);
+    gap: 20px;
+}
+.gallery-item .product-info h4{
+    font-size: 18px;
+    color:green;
+    margin-top: 10px;
+    
+}
+.gallery-item .product-info .order-btn{
+    background-color: rgb(82, 73, 116);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.gallery-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+.gallery-buttons button, .order-btn{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.gallery-buttons button{
+    background-color: #333;
+    color: white;
+}
+.order-btn{
+    background-color: #25D366;
+    color: white;
+    width: 100%;
+}
+.gallery-buttons button:hover{
+    background-color: #555;
+}
+
+.order-btn:hover{
+    background-color: #1da851;
+}
+
+
+.footer{
+    width: 100%;
+    height: 10vh;
+    background-color:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+
+
+.product-image{
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+@media (max-width: 768px) {
+    .gallery{
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+    .gallery img{
+        width: 100%;
+        height: auto;
+    }
+    .prev,
+    .next{
+        padding: 5px 10px;
+        position: absolute;
+        top: 10px;
+        bottom: 5px;
+    }
+}

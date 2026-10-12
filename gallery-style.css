@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #fff;white-space: nowrap;
+    overflow-x: hidden;
+    width: 100%;
+}
+.header{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #65588e77;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+.header, .links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-right: 20px ;
+    gap: 10px;
+}
+.header h1{
+    font-size: 40px;
+    color: whitesmoke;
+}
+.header .header-content .h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+.header span{
+    color: rgb(200, 200, 110);
+    font-weight: bold;
+}
+.header p{
+    font-size: 16px;
+    color: rgb(200, 200, 110);
+    text-decoration: greenyellow;
+    
+}
+
+.header .links a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.header .links a:hover{
+    color: rgb(200, 200, 110);
+    scale: 1.1;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.gallery-description{
+    text-align: center;
+    margin: 20px auto;
+    padding: 0 20px;
+    font-size: 18px;
+    color: whitesmoke;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+.gallery-description h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.gallery-description p{
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(200, 200, 110);
+    
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+
+.gallery{
+    display: grid;
+    grid-template-columns:100px 1fr 100px;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    margin: 40px auto;
+    
+    
+}
+.gallery img{
+    width: 600px;
+    height: 500px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #c57a7a;
+}
+
+.gallery  button{
+    background-color: #2a0f22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    position: relative;
+    
+}
+.gallery  button:hover{
+    background-color: white;
+    color: #2a0f22;
+}
+.prev,
+.next{
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #2a0f22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.prev{
+    justify-self: start;
+}
+.next{
+    justify-self: end;
+}
+/* product information */
+.gallery-info{
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+.product-info{
+    text-align: center;
+    margin: 20px auto;
+    padding: 0 20px;
+    font-size: 18px;
+    color: whitesmoke;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+.product-info h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.product-info p{
+    font-size: 16px;
+    line-height: 1.5;
+    color:whitesmoke;
+}
+.product-info h4{
+    font-size: 20px;
+    margin: 10px 0;
+    line-height: 1.5;
+    color: rgb(200, 200, 110);
+}
+
+.product-info .order-button{
+    display: inline-block;
+    background-color: rgb(200, 200, 110);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+.product-info .order-button:hover{
+    background-color: white;
+    color: rgb(200, 200, 110);
+}
