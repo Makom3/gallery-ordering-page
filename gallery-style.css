@@ -215,7 +215,7 @@ a,h1{
         flex-direction: column;
         position: absolute;
         top: 80px;
-        height: 900vh;
+        height: 100vh;
         right: 0;
         background-color: rgba(252, 251, 251, 0.919);
         width: 70%; 

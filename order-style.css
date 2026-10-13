@@ -183,9 +183,9 @@ a,h1{
         flex-direction: column;
         position: absolute;
         top: 80px;
-        height: 900vh;
+        height: auto;
         right: 0;
-        background-color: rgba(252, 251, 251, 0.916);
+        background-color: rgba(85, 75, 75, 0.916);
         width: 70%; 
         gap: 20px;
         padding: 20px;
@@ -194,7 +194,7 @@ a,h1{
 
     .nav-menu li a {
         display: block;
-        color: rgb(0, 0, 0);
+        color: rgb(243, 236, 236);
         text-decoration: none;
         padding: 10px;
 

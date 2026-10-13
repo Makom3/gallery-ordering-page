@@ -103,7 +103,11 @@ a,h1{
 /* Mobile */
 
 @media only screen and (max-width: 768px) {
-
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
     .navbar {
         position: relative;
     }
@@ -127,9 +131,9 @@ a,h1{
         flex-direction: column;
         position: absolute;
         top: 80px;
-        height: 900vh;
+        height: 100vh;
         right: 0;
-        background-color: rgba(252, 251, 251, 0.916);
+        background-color: rgba(203, 190, 190, 0.916);
         width: 70%; 
         gap: 20px;
         padding: 20px;
