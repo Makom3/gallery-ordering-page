@@ -1,3 +1,14 @@
+// navmenu hamburder
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', function () {
+    navMenu.classList.toggle('active');
+
+    console.log(navMenu.className);
+});
+
+// image slide
 const images= [
     "img/sub-img01.jpg",
     "img/sub-img02.jpg",
