@@ -44,7 +44,6 @@ function prevImage() {
 
 const images2= [
     "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798555/tshirt-img09.jpg",
-    "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798563/tshirt-img08.jpg",
     "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798564/tshirt-img06.jpg",
     "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798703/tshirt-img02.jpg",
     "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798711/tshirt-img05.jpg",
@@ -95,12 +94,12 @@ let currentImage3 = 0;
 const galleryImage3 = document.getElementById("galleryImage3");
 
 function nextImage3() {
-    currentImage2++;
+    currentImage3++;
     if (currentImage3 >= images3.length) {
         currentImage3 = 0;
     }
 
-    galleryImage2.src = images3[currentImage3];
+    galleryImage3.src = images3[currentImage3];
 }
 
 function prevImage3() {
@@ -109,6 +108,43 @@ function prevImage3() {
         currentImage3 = images3.length - 1;
     }
     galleryImage3.src = images3[currentImage3];
+}
+
+// smooth scroll
+function goToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// graphic design
+const images4= [
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792005991/keyholder03.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792005993/keyholder02.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792005991/keyholder01.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792005993/keyholder04.jpg",
+];
+
+let currentImage4 = 0;
+
+const galleryImage4 = document.getElementById("galleryImage4");
+
+function nextImage4() {
+    currentImage4++;
+    if (currentImage4 >= images4.length) {
+        currentImage4 = 0;
+    }
+
+    galleryImage4.src = images4[currentImage4];
+}
+
+function prevImage4() {
+    currentImage4--;
+    if (currentImage4 < 0) {
+        currentImage4 = images4.length - 1;
+    }
+    galleryImage4.src = images4[currentImage4];
 }
 
 // smooth scroll
