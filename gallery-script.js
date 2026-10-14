@@ -10,13 +10,14 @@ hamburger.addEventListener('click', function () {
 
 // image slide
 const images= [
-    "img/sub-img01.jpg",
-    "img/sub-img02.jpg",
-    "img/sub-img03.jpg",
-    "img/sub-img04.jpg",
-    "img/sub-img05.jpg",
-    "img/sub-img06.jpg",
-    "img/sub-img07.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006944/sub-img04.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006921/sub-img01.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006935/sub-img03.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006946/sub-img02.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006915/sub-img06.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006921/sub-img08.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006931/sub-img05.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006919/sub-img07.jpg",
 ];
 
 let currentImage = 0;
@@ -42,10 +43,14 @@ function prevImage() {
 //  tshirt
 
 const images2= [
-    "img/tshirt-img01.jpg",
-    "img/tshirt-img02.jpg",
-    "img/tshirt-img03.jpg",
-    "img/tshirt-img04.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798555/tshirt-img09.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798563/tshirt-img08.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798564/tshirt-img06.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798703/tshirt-img02.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798711/tshirt-img05.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798718/tshirt-img03.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798712/tshirt-img01.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798560/tshirt-img10.jpg",
 ];
 
 let currentImage2 = 0;

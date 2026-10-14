@@ -57,8 +57,9 @@ a,h1{
     transform: all 0.3s ease-in-out ;
 }
 
-
+/* Gallery-description */
 .gallery-description{
+    display: flex;
     text-align: center;
     margin: 20px auto;
     padding: 0 20px;
@@ -72,6 +73,7 @@ a,h1{
 .gallery-description h2{
     font-size: 24px;
     margin-bottom: 10px;
+
 }
 .gallery-description p{
     font-size: 16px;
@@ -85,7 +87,7 @@ a,h1{
     white-space: normal;
 }
 
-
+/* Gallery */
 .gallery{
     display: grid;
     grid-template-columns:100px 1fr 100px;
@@ -101,28 +103,28 @@ a,h1{
 .gallery img{
     width: 600px;
     height: 500px;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
     margin: 0 auto;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    transition:  0.3s ease-in-out;
     border: 2px solid #c57a7a;
 }
 
 .gallery  button{
-    background-color: #2a0f22;
-    color: white;
+    background-color: #f6f5f6;
+    color: rgb(6, 6, 6);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
     position: relative;
-    
+
 }
 .gallery  button:hover{
-    background-color: white;
-    color: #2a0f22;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
 }
 .prev,
 .next{
@@ -143,56 +145,9 @@ a,h1{
     justify-self: end;
 }
 /* product information */
-.gallery-info{
-    align-items: center;
-    gap: 20px;
-    justify-content: center;
-}
-.product-info{
-    text-align: center;
-    margin: 20px auto;
-    padding: 0 20px;
-    font-size: 18px;
-    color: whitesmoke;
-    width: 100%;
-    max-width: 800px;
-    box-sizing: border-box;
-    overflow-wrap: break-word;
-}
-.product-info h2{
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-.product-info p{
-    font-size: 16px;
-    line-height: 1.5;
-    color:whitesmoke;
-}
-.product-info h4{
-    font-size: 20px;
-    margin: 10px 0;
-    line-height: 1.5;
-    color: rgb(200, 200, 110);
-}
-
-.product-info .order-button{
-    display: inline-block;
-    background-color: rgb(200, 200, 110);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
-}
-.product-info .order-button:hover{
-    background-color: white;
-    color: rgb(200, 200, 110);
-}
 
 @media only screen and (max-width: 768px) {
-.navbar {
+    .navbar {
         position: relative;
     }
 
@@ -236,5 +191,49 @@ a,h1{
         border: 1px solid rgb(85, 0, 255);
         border-right:  1px ; border-top: 1px; border-bottom: 1px;
     }
+    .gallery{
+        display: grid;
+        grid-template-rows: repeat(auto-fit,minmax(min(100%,280px),1fr)) ;
+        gap: 1px;
+        padding: 5px;
+        
+    }
+    .gallery img{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 10px;
+    transition:  0.3s ease-in-out;
+    border: none;
+}
     
+    .gallery button:active{
+        color:rgb(176, 201, 176);
+        background-color: rgb(0, 0, 0);
+        display: inline-flex; 
+    }
+
+    
+    .prev,
+    .next{
+    top: 80%;
+    transform: translateY(-10%);
+    background-color: #b19aaa;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 80px;
+    justify-content: center;
+    }
+    .prev{
+    justify-self: start;
+    }
+    .next{
+    justify-self: end;
+    }
+
 }
