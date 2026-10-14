@@ -81,3 +81,40 @@ function goToSection(sectionId) {
         section.scrollIntoView({ behavior: 'smooth' });
     }
 }
+
+// keyholder
+const images3= [
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792005991/keyholder03.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792005993/keyholder02.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792005991/keyholder01.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792005993/keyholder04.jpg",
+];
+
+let currentImage3 = 0;
+
+const galleryImage3 = document.getElementById("galleryImage3");
+
+function nextImage3() {
+    currentImage2++;
+    if (currentImage3 >= images3.length) {
+        currentImage3 = 0;
+    }
+
+    galleryImage2.src = images3[currentImage3];
+}
+
+function prevImage3() {
+    currentImage3--;
+    if (currentImage3 < 0) {
+        currentImage3 = images3.length - 1;
+    }
+    galleryImage3.src = images3[currentImage3];
+}
+
+// smooth scroll
+function goToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
