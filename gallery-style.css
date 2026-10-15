@@ -88,62 +88,77 @@ a,h1{
 }
 
 /* Gallery */
-.gallery{
+/* Gallery box */
+.gallery {
     position: relative;
     width: 100%;
-    max-height: 450px;
-    margin: auto;    
-}
-.gallery img{
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    touch-action: pan-y;
+    max-width: 600px;
+    height: 400px;
+    margin: 30px auto;
+    overflow: hidden;
+
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
-.gallery  button{
+/* Gallery image */
+.gallery img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    border-radius: 18px;
+}
+
+/* Buttons container */
+.gallery .buttons {
     position: absolute;
-    inset: 0;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    align-items: center;
+    transform: translateY(-50%);
     z-index: 2;
     pointer-events: none;
 }
-.gallery  button:hover{
-    transition: 0.3s ease-in-out;
-}
 
-.gallery .buttons button{
-    pointer-events: auto;
-    width: 40px;
-    height: 40px;
+/* Previous and next buttons */
+.gallery .buttons button {
+    width: 42px;
+    height: 42px;
     border: none;
     border-radius: 50%;
+
     background: rgba(0, 0, 0, 0.7);
-}
-.prev,
-.next{
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #2a0f22;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    font-size: 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: auto;
+    transition: background 0.3s, transform 0.3s;
 }
-.prev{
-    justify-self: start;
+
+/* Hover effect for desktop */
+.gallery .buttons button:hover {
+    background: #7b7a769a;
+    color: #111;
+    transform: scale(1.1);
 }
-.next{
-    justify-self: end;
-}
+
 /* product information */
 
+
+/* Mobile responsive */
 @media only screen and (max-width: 768px) {
     .navbar {
         position: relative;
@@ -189,46 +204,21 @@ a,h1{
         border: 1px solid rgb(85, 0, 255);
         border-right:  1px ; border-top: 1px; border-bottom: 1px;
     }
-    .gallery{
-        display: grid;
-        grid-template-rows: repeat(auto-fit,minmax(min(100%,280px),1fr)) ;
-        gap: 1px;
-        padding: 5px;   
+    .gallery {
+        width: 100%;
+        height: 300px;
+        margin: 20px auto;
+        border-radius: 14px;
     }
-    .gallery .buttons{
-        display: none;
-    }
-    .gallery img{
-    width: 300px;
-    height: 300px;
-    display: flex;
-    margin: 0 auto;
-    border-radius: 10px;
-    transition:  0.3s ease-in-out;
-    border: none;
-}
-    
 
-    
-    .prev,
-    .next{
-    top: 80%;
-    transform: translateY(-10%);
-    background-color: #b19aaa;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 10px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    width: 80px;
-    justify-content: center;
+    .gallery img {
+        border-radius: 14px;
     }
-    .prev{
-    justify-self: start;
-    }
-    .next{
-    justify-self: end;
+
+    .gallery .buttons button {
+        width: 36px;
+        height: 36px;
+        font-size: 17px;
     }
 
 }

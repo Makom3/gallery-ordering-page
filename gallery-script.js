@@ -8,55 +8,40 @@ hamburger.addEventListener('click', function () {
     console.log(navMenu.className);
 });
 
-// touch
-let startX = 0
-galleryImage.addEventListener("touchstart", function(event){
-    startX= event.changedTouches[0].screenX;
-},{passive:true});
-galleryImage.addEventListener("touchstart", function(event){
 
-const endX = event.changedTouches[0].screenX;
-const difference = startX - endX;
-
-if (difference > 50){
-    nextImage();
-} else if (difference< -50){
-    prevImage
-}
-},{passive:true}
 
 // image slide sublimation
-// const images= [
-//     "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006944/sub-img04.jpg",
-//     "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006921/sub-img01.jpg",
-//     "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006935/sub-img03.jpg",
-//     "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006946/sub-img02.jpg",
-//     "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006915/sub-img06.jpg",
-//     "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006921/sub-img08.jpg",
-//     "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006931/sub-img05.jpg",
-//     "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006919/sub-img07.jpg",
-// ];
+const images= [
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006944/sub-img04.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006921/sub-img01.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006935/sub-img03.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006946/sub-img02.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006915/sub-img06.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006921/sub-img08.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006931/sub-img05.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006919/sub-img07.jpg",
+];
 
-// let currentImage = 0;
+let currentImage = 0;
 
-// const galleryImage = document.getElementById("galleryImage");
+const galleryImage = document.getElementById("galleryImage");
 
-// function nextImage() {
-//     currentImage++;
-//     if (currentImage >= images.length) {
-//         currentImage = 0;
-//     }
+function nextImage() {
+    currentImage++;
+    if (currentImage >= images.length) {
+        currentImage = 0;
+    }
 
-//     galleryImage.src = images[currentImage];
-// }
+    galleryImage.src = images[currentImage];
+}
 
-// function prevImage() {
-//     currentImage--;
-//     if (currentImage < 0) {
-//         currentImage = images.length - 1;
-//     }
-//     galleryImage.src = images[currentImage];
-// }
+function prevImage() {
+    currentImage--;
+    if (currentImage < 0) {
+        currentImage = images.length - 1;
+    }
+    galleryImage.src = images[currentImage];
+}
 //  tshirt
 
 const images2= [
@@ -137,10 +122,12 @@ function goToSection(sectionId) {
 
 // graphic design
 const images4= [
-    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792005991/keyholder03.jpg",
-    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792005993/keyholder02.jpg",
-    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792005991/keyholder01.jpg",
-    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792005993/keyholder04.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792007366/graphic04.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792007362/graphic05.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792007354/graphic01.png",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792007358/graphic03.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792007361/graphic02.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792007360/graphic06.jpg",
 ];
 
 let currentImage4 = 0;
