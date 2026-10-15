@@ -8,7 +8,24 @@ hamburger.addEventListener('click', function () {
     console.log(navMenu.className);
 });
 
-// image slide
+// touch
+let startX = 0
+galleryImage.addEventListener("touchstart", function(event){
+    startX= event.changedTouches[0].screenX;
+},{passive:true});
+galleryImage.addEventListener("touchstart", function(event){
+
+const endX = event.changedTouches[0].screenX;
+const difference = startX - endX;
+
+if (difference > 50){
+    nextImage();
+} else if (difference< -50){
+    prevImage
+}
+},{passive:true}
+
+// image slide sublimation
 const images= [
     "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006944/sub-img04.jpg",
     "https://res.cloudinary.com/txkpxwxm/image/upload/v1792006921/sub-img01.jpg",
