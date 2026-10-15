@@ -10,11 +10,11 @@ hamburger.addEventListener('click', function () {
 
 // gallery slide
 const images= [
-    "img/printout-img.png",
-    "img/sublimation-img.png",
-    "img/keyholder-img.png",
-    "img/graphicdesign-img.png",
-    "img/t-shirtprinting-img.png",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1791805401/t-shirtprinting-img.png",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1791804949/sublimation-img.png",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1791804949/keyholder-img.png",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1791804954/printout-img.png",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1791804950/graphicdesign-img.png",
 ];
 
 let currentImage = 0;
