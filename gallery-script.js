@@ -181,11 +181,11 @@ const galleryImage5 = document.getElementById("galleryImage5");
 
 function nextImage5() {
     currentImage5++;
-    if (currentImage5 >= images4.length) {
+    if (currentImage5 >= images5.length) {
         currentImage5 = 0;
     }
 
-    galleryImage5.src = images4[currentImage5];
+    galleryImage5.src = images5[currentImage5];
 }
 
 function prevImage5() {

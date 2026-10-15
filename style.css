@@ -112,6 +112,9 @@ a,h1{
     .navbar {
         position: relative;
     }
+    .navbar .nav-logo{
+        font-size: 12px;
+    }
 
     .hamburger {
         display: block;
