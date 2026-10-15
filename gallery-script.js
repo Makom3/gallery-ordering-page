@@ -128,6 +128,10 @@ const images4= [
     "https://res.cloudinary.com/txkpxwxm/image/upload/v1792007358/graphic03.jpg",
     "https://res.cloudinary.com/txkpxwxm/image/upload/v1792007361/graphic02.jpg",
     "https://res.cloudinary.com/txkpxwxm/image/upload/v1792007360/graphic06.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792093401/graphic07.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792093406/graphic08.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792093410/graphic09.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792093407/graphic10.jpg",
 ];
 
 let currentImage4 = 0;
@@ -149,6 +153,47 @@ function prevImage4() {
         currentImage4 = images4.length - 1;
     }
     galleryImage4.src = images4[currentImage4];
+}
+
+// smooth scroll
+function goToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// vinyl 
+const images5= [
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792090896/vinyl01.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792090911/vinyl03.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792090909/vinyl11.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792090898/vinyl09.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792090915/vinyl08.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792090908/vinyl10.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792090913/vinyl05.jpg",
+    "https://res.cloudinary.com/txkpxwxm/image/upload/v1792090912/vinyl07.jpg",
+];
+
+let currentImage5 = 0;
+
+const galleryImage5 = document.getElementById("galleryImage5");
+
+function nextImage5() {
+    currentImage5++;
+    if (currentImage5 >= images4.length) {
+        currentImage5 = 0;
+    }
+
+    galleryImage5.src = images4[currentImage5];
+}
+
+function prevImage5() {
+    currentImage5--;
+    if (currentImage5 < 0) {
+        currentImage5 = images5.length - 1;
+    }
+    galleryImage5.src = images5[currentImage5];
 }
 
 // smooth scroll
