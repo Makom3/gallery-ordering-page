@@ -71,7 +71,7 @@ const products = [
     {
         image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172085/front-back-02.png",
         name:"Pocket Front & Medium Back Print",
-        description:"Print pocket size at front and medium size print at back(30cmx7cm)",
+        description:"Print front pocket and back medium size (30cmx7cm)",
         price: 80
     },
     {
