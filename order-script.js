@@ -134,9 +134,9 @@ orderBtn.addEventListener("click",function(){
     `Price:R${product.price}\n\n` +
     `Please let me know how to proceed.`;
 
-    const whatsappURL = `https://wa.me/${27713751901}?text=${encodeURIComponent(message)}`;
+    const whatsappURL = `https://wa.me/${+27713751901}?text=${encodeURIComponent(message)}`;
 
-    window.open(whatsappRUL,"_blank");
+    window.open(whatsappURL,"_blank");
 })
 
 let startX = 0;
