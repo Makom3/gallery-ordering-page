@@ -28,31 +28,31 @@ const products = [
     {
         image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172079/pocket-size-small.png",
         name:"Pocket Size Small Print",
-        description:"Small pocket size print, mainly names and letters",
+        description:"Pocket size print, mainly names ",
         price: 30
     },
     {
         image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172077/pocket-size-medium.png",
         name:"Pocket Size Medium Print",
-        description:"Medium sized print fit for logos and 2 lined name tag",
+        description:"Print Logo or Curved Text",
         price: 50
     },
     {
         image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172078/chest-size-small.png",
         name:"Chest Size Print(Small)",
-        description:"Chest size printing 30cm width x 6cm height",
+        description:"Chest size print 30cmx6cm",
         price: 40
     },
     {
         image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172086/chest-size-medium.png",
         name:"Chest Size Print(Medium)",
-        description:"Chest size printing 30cm width x 21cm height(A4)",
+        description:"Chest size printing 30cmx21cm(A4)",
         price: 60
     },
     {
         image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172078/chest-size-large.png",
         name:"Chest Size Print(large)",
-        description:"Chest size printing 30cm width x 30cm height",
+        description:"Chest size printing 30cmx30cm",
         price: 80
     },
     {
@@ -65,19 +65,19 @@ const products = [
     {
         image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172084/front-back-01.png",
         name:"Mediun Front and Back Print",
-        description:"Print medium size at front and back of your t-shirt",
+        description:"Print medium size front and back ",
         price: 100
     },
     {
         image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172085/front-back-02.png",
         name:"Pocket Front & Medium Back Print",
-        description:"Print front pocket and back medium size (30cmx7cm)",
+        description:"Front pocket and back medium size",
         price: 80
     },
     {
         image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172082/front-back-03.png",
         name:"Pocket Front & Large Back Print",
-        description:"Print pocket sied at front and large size print at back(A4)",
+        description:"Print pocket at front and large print at back(A4)",
         price: 120
     },
     {
