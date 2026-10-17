@@ -26,23 +26,67 @@ hamburger.addEventListener('click', function () {
 // assign button with prev and next
 const products = [
     {
-        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1791798712/tshirt-img01.jpg",
-        name:"Birthday T-shirt",
-        description:"White t-shirt with front photo/cartoon print only",
-        price: 70
+        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172079/pocket-size-small.png",
+        name:"Pocket Size Small Print",
+        description:"Small pocket size print, mainly names and letters",
+        price: 30
     },
     {
-        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1791798711/tshirt-img05.jpg",
-        name:"Birthday T-shirt",
-        description:"Printing text only",
+        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172077/pocket-size-medium.png",
+        name:"Pocket Size Medium Print",
+        description:"Medium sized print fit for logos and 2 lined name tag",
+        price: 50
+    },
+    {
+        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172078/chest-size-small.png",
+        name:"Chest Size Print(Small)",
+        description:"Chest size printing 30cm width x 6cm height",
         price: 40
     },
     {
-        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1791798555/tshirt-img09.jpg",
-        name:"Birthday T-shirt",
-        description:"printing text with photo",
-        price: 100
+        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172086/chest-size-medium.png",
+        name:"Chest Size Print(Medium)",
+        description:"Chest size printing 30cm width x 21cm height(A4)",
+        price: 60
     },
+    {
+        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172078/chest-size-large.png",
+        name:"Chest Size Print(large)",
+        description:"Chest size printing 30cm width x 30cm height",
+        price: 80
+    },
+    {
+        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172077/pocket-chest-size.png",
+        name:"Pocket and Chest Size Print",
+        description:"Pocket size and Chest size(A4) print",
+        price: 80
+    },
+    // Front and Back
+    {
+        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172077/pocket-chest-size.png",
+        name:"Mediun Front and Back Print",
+        description:"Print medium size at front and back of your t-shirt",
+        price: 80
+    },
+    {
+        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172077/pocket-chest-size.png",
+        name:"Pocket Front & Medium Back Print",
+        description:"Print pocket size at front and medium size print at back(30cmx7cm)",
+        price: 80
+    },
+    {
+        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172077/pocket-chest-size.png",
+        name:"Pocket Front & Large Back Print",
+        description:"Print pocket sied at front and large size print at back(A4)",
+        price: 120
+    },
+    {
+        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172077/pocket-chest-size.png",
+        name:"Pocket size and Small Print",
+        description:"Print pocket size at front and back of your t-shirt",
+        price: 60
+    },
+    
 ];
 
 let currentIndex = 0;

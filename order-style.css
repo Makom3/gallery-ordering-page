@@ -68,7 +68,7 @@ a,h1{
 }
 .gallery-item{
     
-    color: rgb(255, 255, 255);
+    color: rgb(227, 233, 227);
     border-radius: 10px;
     overflow: hidden;
     
@@ -80,10 +80,11 @@ a,h1{
     box-sizing: border-box;
     width: 100%;
     
+    
 }
 .gallery-item img{
-    width: 300px;
-    height: 300px;
+    width: 560px;
+    height: 350px;
     object-fit: contain;
     display: flex;
     margin: 20px auto;
@@ -105,7 +106,7 @@ a,h1{
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
     text-decoration: none;
 }
 
@@ -216,6 +217,10 @@ a,h1{
     .content-item{
         width: 100%;
     }
+    .gallery-item img{
+        width: 400px;
+    height: 250px;
+    };
 
     
 }
