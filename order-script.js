@@ -63,25 +63,25 @@ const products = [
     },
     // Front and Back
     {
-        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172077/pocket-chest-size.png",
+        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172084/front-back-01.png",
         name:"Mediun Front and Back Print",
         description:"Print medium size at front and back of your t-shirt",
-        price: 80
+        price: 100
     },
     {
-        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172077/pocket-chest-size.png",
+        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172085/front-back-02.png",
         name:"Pocket Front & Medium Back Print",
         description:"Print pocket size at front and medium size print at back(30cmx7cm)",
         price: 80
     },
     {
-        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172077/pocket-chest-size.png",
+        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172082/front-back-03.png",
         name:"Pocket Front & Large Back Print",
         description:"Print pocket sied at front and large size print at back(A4)",
         price: 120
     },
     {
-        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172077/pocket-chest-size.png",
+        image:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792172088/front-back-04.png",
         name:"Pocket size and Small Print",
         description:"Print pocket size at front and back of your t-shirt",
         price: 60
