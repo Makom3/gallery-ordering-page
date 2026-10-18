@@ -10,19 +10,6 @@ hamburger.addEventListener('click', function () {
 // Swipe
 
 
-
-// direct to watsapp
-// const orderBtn = document.querySelector(".order-btn");
-
-// orderBtn.onclick = function(){
-//         const phoneNumber= "27713751901"; 
-//         const message= "hi, i would like to order this shirt.";
-
-
-// const whatsappURL=`https://wa.me/${27713751901}=${encodeURIComponent(message)}`;
-//      window.open(whatsappURL,"_blank");
-// };
-
 // assign button with prev and next
 const products = [
     {
@@ -145,7 +132,7 @@ productImage.addEventListener("pointerdown", function (event) {
     startX = event.clientX;
 });
 productImage.addEventListener("pointerup", function (event) {
-    const difference = startXv-  event.clientX;
+    const difference = startX -  event.clientX;
 
 
     if (difference > 50) {
@@ -157,80 +144,97 @@ productImage.addEventListener("pointerup", function (event) {
 
     
 
+// Coffee mug
 
-// gfhfgjj
-// const products = [
-//     {
-//         image: "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798712/tshirt-img01.jpg",
-//         name: "Black T-shirt",
-//         description: "A stylish black T-shirt.",
-//         price: 150
-//     },
-//     {
-//         image: "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798711/tshirt-img05.jpg",
-//         name: "Personalized Mug",
-//         description: "A custom mug with your own design.",
-//         price: 80
-//     },
-//     {
-//         image: "https://res.cloudinary.com/txkpxwxm/image/upload/v1791798555/tshirt-img09.jpg",
-//         name: "Custom Keyholder",
-//         description: "A personalized keyholder.",
-//         price: 40
-//     }
-// ];
+const products2 = [
+    {
+        image2:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792340443/mug_rint.png",
+        name2:"Personalised Coffee(White)",
+        description2:"We Design and Print any of your choice",
+        price2: 100
+    },
+    {
+        image2:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792340470/no-product.png",
+        name2:"Personalised Magic Coffee",
+        description2:"Color changing coffee mug",
+        price2: 150
+    }, 
+    {
+        image2:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792340441/keyholder-sample.png",
+        name2:"Personalised Keyholder",
+        description2:"Print Both Sides",
+        price2: 70
+    },
+    {
+        image2:"https://res.cloudinary.com/txkpxwxm/image/upload/v1792343095/mug_keyholder_img.png",
+        name2:"Personalised Coffee Mug + Keyholder",
+        description2:"Get A Combo For 2 for only",
+        price2: 150
+    }, 
+];
 
-// let currentIndex = 0;
+let currentIndex2 = 0;
 
-// // Select HTML elements
-// const productImage = document.querySelector("#product-image");
-// const productName = document.querySelector("#product-name");
-// const productDescription = document.querySelector("#product-description");
-// const productPrice = document.querySelector("#product-price");
+const productImage2= document.querySelector("#product-image2");
+const productName2= document.querySelector("#product-name2");
+const productDescription2= document.querySelector("#product-description2");
+const productPrice2= document.querySelector("#product-price2");
 
-// const nextBtn = document.querySelector("#next-btn");
-// const prevBtn = document.querySelector("#prev-btn");
-// const orderBtn = document.querySelector(".order-btn");
+const nextBtn2 = document.querySelector("#next-btn2");
+const prevBtn2 = document.querySelector("#prev-btn2");
+const orderBtn2 = document.querySelector(".order-btn2");
 
-// // Display the selected product
-// function showProduct() {
-//     const product = products[currentIndex];
+function showProduct2(){
+   const product2 = products2[currentIndex2];
 
-//     productImage.src = product.image;
-//     productName.textContent = product.name;
-//     productDescription.textContent = product.description;
-//     productPrice.textContent = `R${product.price}`;
-// }
+   productImage2.src = product2.image2;
+   productName2.textContent = product2.name2;
+   productDescription2.textContent = product2.description2;
+   productPrice2.textContent = `R${product2.price2}`;
+}
 
-// // Next button
-// nextBtn.onclick = function () {
-//     currentIndex = (currentIndex + 1) % products.length;
-//     showProduct();
-// };
+//next button
+nextBtn2.addEventListener("click",function(){
+    currentIndex2 = (currentIndex2 + 1) % products2.length;
+    showProduct2();
+});
 
-// // Previous button
-// prevBtn.onclick = function () {
-//     currentIndex =
-//         (currentIndex - 1 + products.length) % products.length;
+//previous button
+prevBtn2.addEventListener("click",function(){
+    currentIndex2=(currentIndex2 - 1 + products2.length )%products2.length;
+    showProduct2();
 
-//     showProduct();
-// };
+})
+// whatsapp button
+orderBtn2.addEventListener("click",function(){
+    const product2 = products2[currentIndex2];
 
-// // WhatsApp order button
-// orderBtn.onclick = function () {
-//     const product = products[currentIndex];
+    const phoneNumber = "27713751901";
 
-//     const phoneNumber = "27713751901"; 
-//     const message =
-//         `Hi! I would like to order:\n\n` +
-//         `Product: ${product.name}\n` +
-//         `Description: ${product.description}\n` +
-//         `Price: R${product.price}`;
+    const message = 
+    `Hey,i would like this order:\n\n` +
+    `Product2:${product2.name2}\n` +
+    `Description2:${product2.description2}\n` +
+    `Price2:R${product2.price2}\n\n` +
+    `Please let me know how to proceed.`;
 
-//     const whatsappURL = `https://wa.me/${27713751901}?text=${encodeURIComponent(message)}`;
+    const whatsappURL = `https://wa.me/${+27713751901}?text=${encodeURIComponent(message)}`;
 
-//     window.open(whatsappURL, "_blank");
-// };
+    window.open(whatsappURL,"_blank");
+})
 
-// // Show the first product when the page loads
-// showProduct();
+let startX2 = 0;
+
+productImage2.addEventListener("pointerdown", function (event) {
+    startX2 = event.clientX2;
+});
+productImage2.addEventListener("pointerup", function (event) {
+    const difference2 = startX2 -  event.clientX2;
+
+
+    if (difference2 > 50) {
+        nextBtn2.click();
+    } else if (difference2 < -50) {
+        prevBtn2.click();
+    }
+}); 
