@@ -50,7 +50,7 @@ a,h1{
 .hamburger{
     display: none;
 }
-.bar{
+.bar1, .bar2, .bar3{
     display: block;
     width: 25px;
     height: 3px;
@@ -198,7 +198,6 @@ a,h1{
         padding: 1rem;
         cursor: pointer;
     }
-
     .nav-menu {
         display: none;
         list-style: none;
@@ -214,8 +213,8 @@ a,h1{
         top: 80px;
         height: 100vh;
         right: 0;
-        background-color: rgb(121, 108, 108);
-        width: 70%; 
+        background-color: rgb(255, 254, 254);
+        width: 100%; 
         gap: 20px;
         padding: 20px;
         z-index: 1000;
@@ -223,17 +222,16 @@ a,h1{
 
     .nav-menu li a {
         display: block;
-        color: rgb(243, 236, 236);
+        color: rgb(0, 0, 0);
         text-decoration: none;
         padding: 10px;
-
-
     }
     .nav-menu li a:hover {
         box-shadow: none;
         border: 1px solid black;
         border-right:  1px ; border-top: 1px; border-bottom: 1px;
     }
+    
     /* section */
     .content{
         display: block;
