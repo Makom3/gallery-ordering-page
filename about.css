@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, sans-serif;
     background: #fff;
@@ -17,29 +16,24 @@ ul{
 }
 a,h1{
     text-decoration: none;
-    color: rgb(225, 224, 224);
-    padding: 1rem;
+    color: rgb(36, 35, 35);
+    padding: 10px;
+}
+.about-hero h1{
+    color: white;
 }
 .navbar .nav-logo{
-    color: rgb(36, 119, 119);
+    color: rgb(36, 67, 119);
 }
-
-
 .header{
     width: 100%;
     height: 80px;
-    background-color: rgb(177, 190, 202);
+    background-color: rgba(255, 215, 215, 0.6);
     backdrop-filter: blur(5px);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
-.header a:hover{
-    color: rgb(104, 189, 104);
-    border: none;
-    cursor: pointer;
-}
-
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -63,8 +57,6 @@ a,h1{
     background-color: #818ecf;
     transform: all 0.3s ease-in-out ;
 }
-
-
 .logo span,
 .tagline,
 .section-label {
@@ -82,7 +74,6 @@ a,h1{
     padding: 100px  8%;
     width: 100%;
     box-sizing: border-box;
-
 }
 
 .hero-content {
@@ -334,21 +325,68 @@ footer {
 }
 
 /* Mobile responsive design */
-@media (max-width: 768px) {
-    .header {
+
+@media only screen and (max-width: 768px){
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    .header{
         flex-direction: column;
         padding: 18px 5%;
     }
-
-    .header nav {
-        justify-content: center;
-        gap: 15px;
+    .navbar {
+        position: relative;
+    }
+    .navbar .nav-logo{
+        font-size: 12px;
     }
 
-    .header nav a {
-        font-size: 13px;
+    .hamburger {
+        display: block;
+        padding: 1rem;
+        cursor: pointer;
     }
 
+    .nav-menu {
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    
+    }
+    
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        height: 100vh;
+        right: 0;
+        background-color: rgba(203, 190, 190, 0.916);
+        width: 70%; 
+        gap: 20px;
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    .nav-menu li a {
+        display: block;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        padding: 10px;
+
+
+    }
+    .nav-menu li a:hover {
+        box-shadow: none;
+        border: 1px solid black;
+        border-right:  1px ; border-top: 1px; border-bottom: 1px;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
     .about-hero {
         padding: 70px 6%;
     }
@@ -384,63 +422,5 @@ footer {
 
     .about-cta {
         padding: 50px 6%;
-    }
-}
-
-@media only screen and (max-width: 768px){
-    .navbar {
-        position: relative;
-    }
-
-    .hamburger {
-        display: block;
-        padding: 1rem;
-        cursor: pointer;
-    }
-
-    .nav-menu {
-        display: none;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    
-    }
-    
-    .nav-menu.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        height: 100vh;
-        right: 0;
-        background-color: rgb(228, 242, 243);
-        width: 70%; 
-        gap: 20px;
-        padding: 20px;
-        z-index: 1000;
-    }
-    .nav-logo h1{
-        font-size: 20px;
-    }
-    .nav-menu li a {
-        display: block;
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-        padding: 10px;
-
-
-    }
-    .nav-menu li a:hover {
-        box-shadow: none;
-        border: 1px solid black;
-        border-right:  1px ; border-top: 1px; border-bottom: 1px;
-    }
-    section{
-        width: 100%;
-        margin: 20px auto;
-        border-radius: 14px;
-    }
-    .services-grid {
-        grid-template-columns: 1fr;
     }
 }
