@@ -5,10 +5,10 @@
 }
 body{
     font-family: Arial, sans-serif;
-    background-color:rgb(0, 0, 0);
-    color: #fff;
-    white-space: nowrap;
-    overflow-x: hidden;
+    background-color: #000000;
+    color: #fff;white-space: nowrap;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
     width: 100%;
 }
 /* Header */
@@ -18,7 +18,7 @@ ul{
 a,h1{
     text-decoration: none;
     color: rgb(225, 224, 224);
-    padding: 1rem;
+    padding: 10px;
 }
 .header a:hover{
     color: rgb(104, 189, 104);
@@ -273,9 +273,19 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    .header{
+        flex-direction: column;
+    }
     .navbar {
         position: relative;
+    }
+    .navbar .nav-logo{
+        font-size: 12px;
     }
 
     .hamburger {
@@ -288,7 +298,6 @@ footer {
         list-style: none;
         padding: 0;
         margin: 0;
-    
     }
     
     .nav-menu.active {
@@ -299,7 +308,7 @@ footer {
         height: 100vh;
         right: 0;
         background-color: rgb(255, 254, 254);
-        width: 100%; 
+        width: 70%; 
         gap: 20px;
         padding: 20px;
         z-index: 1000;
