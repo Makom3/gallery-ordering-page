@@ -203,16 +203,14 @@ a,h1{
 .action-button a:active {
     background-color: #128C7E;
 }
+
 /* Footer */
-.footer{
-    width: 100%;
-    height: 10vh;
-    background-color:relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(255, 253, 253);
-    font-size: 16px;
+.footer {
+    padding: 22px 6%;
+    background: #0b0b0b;
+    color: #bbb;
+    text-align: center;
+    font-size: 13px;
 }
 /* Mobile responsive */
 @media only screen and (max-width: 768px) {
