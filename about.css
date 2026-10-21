@@ -3,6 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --ayse-green: #9bbb4a;
+    --ayse-border: #17c200;
+    --ayse-black: #000000;
+    --ayse-card: #201e1e;
+    --ayse-white: #ffffff;
+    --ayse-grey: #cccccc;
+     --ayse-blue: rgb(36, 67, 119);
+}
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
 body {
     font-family: Arial, sans-serif;
     background: #fff;
@@ -337,56 +351,68 @@ footer {
     padding: 0;
     box-sizing: border-box;
     }
-    .header{
-        flex-direction: column;
+    .header {
+        min-height: 75px;
     }
     .navbar {
-        position: relative;
+        min-height: 75px;
+        padding: 10px 4%;
+        justify-content: space-between;
+        gap: 10px;
     }
-    .navbar .nav-logo{
+
+    .navbar .nav-logo {
         font-size: 12px;
+        max-width: 80%;
+        white-space: normal;
+
     }
 
     .hamburger {
         display: block;
-        padding: 1rem;
-        cursor: pointer;
+        flex-shrink: 0;
+        padding: 10px;
     }
 
     .nav-menu {
         display: none;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    
     }
     
     .nav-menu.active {
         display: flex;
         flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
         position: absolute;
-        top: 80px;
-        height: 100vh;
+        top: 100%;
         right: 0;
-        background-color: whitesmoke;
-        width: 70%; 
-        gap: 20px;
+        width: min(280px, 85vw);
+        max-height: 100vh;
+        overflow-y: auto;
+        gap: 8px;
         padding: 20px;
-        z-index: 1000;
+        background-color: #111111;
+        border-left: 2px solid var(--ayse-border);
+        border-bottom: 2px solid var(--ayse-border);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        z-index: 1001;
+    }
+
+    .nav-menu li {
+        width: 100%;
     }
 
     .nav-menu li a {
         display: block;
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-        padding: 10px;
-
-
+        width: 100%;
+        padding: 12px;
+        color: #ffffff;
+        border-radius: 5px;
     }
     .nav-menu li a:hover {
-        box-shadow: none;
-        border: 1px solid black;
-        border-right:  1px ; border-top: 1px; border-bottom: 1px;
+        background-color: #222222;
+        color: var(--ayse-green);
+        border: none;
     }
     .services-grid {
         grid-template-columns: 1fr;
