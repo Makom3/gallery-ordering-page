@@ -3,14 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --ayse-green: #a8ed00;
+    --ayse-border: #17c200;
+    --ayse-black: #000000;
+    --ayse-card: #201e1e;
+    --ayse-white: #ffffff;
+    --ayse-grey: #cccccc;
+    --ayse-blue: rgb(36, 67, 119);
+}
 body{
     font-family: Arial, sans-serif;
     background-color: #000000;
-    color: #fff;white-space: nowrap;
+    color: #fff;
+    white-space: nowrap;
     font-family: Arial, sans-serif;
     line-height: 1.7;
     width: 100%;
-
+    background:
+        radial-gradient(
+            ellipse at bottom right,
+            var(--ayse-blue),
+            transparent 45%
+        ),
+        #101010;
 }
 /* Header */
 ul{
