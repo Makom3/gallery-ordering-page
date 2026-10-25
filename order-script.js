@@ -3,8 +3,8 @@ const navMenu = document.querySelector('.nav-menu');
 
 hamburger.addEventListener('click', function () {
     navMenu.classList.toggle('active');
-
-    console.log(navMenu.className);
+    hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', navMenu.classList.contains('active'));
 });
 
 // Swipe
@@ -108,23 +108,171 @@ prevBtn.addEventListener("click",function(){
     showProduct();
 
 })
-// whatsapp button
-orderBtn.addEventListener("click",function(){
+const cartToggle = document.querySelector("#cart-toggle");
+const cartPanel = document.querySelector("#cart-panel");
+const cartClose = document.querySelector("#cart-close");
+const cartBackdrop = document.querySelector("#cart-backdrop");
+const cartCount = document.querySelector("#cart-count");
+const cartItems = document.querySelector("#cart-items");
+const cartEmpty = document.querySelector("#cart-empty");
+const cartTotal = document.querySelector("#cart-total");
+const checkoutButton = document.querySelector("#checkout-btn");
+const cart = new Map();
+const whatsappPhoneNumber = "27713751901";
+
+function setCartOpen(isOpen) {
+    cartPanel.hidden = !isOpen;
+    cartBackdrop.hidden = !isOpen;
+    cartToggle.setAttribute("aria-expanded", isOpen);
+}
+
+function renderCart() {
+    cartItems.replaceChildren();
+
+    let itemCount = 0;
+    let total = 0;
+
+    cart.forEach(function (item, key) {
+        itemCount += item.quantity;
+        total += item.price * item.quantity;
+
+        const row = document.createElement("li");
+        row.className = "cart-item";
+
+        const info = document.createElement("div");
+        info.className = "cart-item-info";
+
+        const name = document.createElement("strong");
+        name.className = "cart-item-name";
+        name.textContent = item.name;
+
+        const price = document.createElement("span");
+        price.className = "cart-item-price";
+        price.textContent = `R${item.price.toFixed(2)} each`;
+
+        const controls = document.createElement("div");
+        controls.className = "cart-item-controls";
+
+        const decreaseButton = document.createElement("button");
+        decreaseButton.type = "button";
+        decreaseButton.textContent = "−";
+        decreaseButton.setAttribute("aria-label", `Decrease ${item.name} quantity`);
+        decreaseButton.addEventListener("click", function () {
+            if (item.quantity === 1) {
+                cart.delete(key);
+            } else {
+                item.quantity -= 1;
+            }
+            renderCart();
+        });
+
+        const quantity = document.createElement("span");
+        quantity.textContent = item.quantity;
+        quantity.setAttribute("aria-label", "Quantity");
+
+        const increaseButton = document.createElement("button");
+        increaseButton.type = "button";
+        increaseButton.textContent = "+";
+        increaseButton.setAttribute("aria-label", `Increase ${item.name} quantity`);
+        increaseButton.addEventListener("click", function () {
+            item.quantity += 1;
+            renderCart();
+        });
+
+        const removeButton = document.createElement("button");
+        removeButton.type = "button";
+        removeButton.className = "cart-remove";
+        removeButton.textContent = "×";
+        removeButton.setAttribute("aria-label", `Remove ${item.name} from cart`);
+        removeButton.addEventListener("click", function () {
+            cart.delete(key);
+            renderCart();
+        });
+
+        info.append(name, document.createElement("br"), price);
+        controls.append(decreaseButton, quantity, increaseButton, removeButton);
+        row.append(info, controls);
+        cartItems.append(row);
+    });
+
+    cartCount.textContent = itemCount;
+    cartTotal.textContent = `R${total.toFixed(2)}`;
+    cartEmpty.hidden = itemCount > 0;
+    checkoutButton.disabled = itemCount === 0;
+}
+
+function addToCart(key, product) {
+    const existingItem = cart.get(key);
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.set(key, {
+            name: product.name,
+            price: product.price,
+            quantity: 1
+        });
+    }
+    renderCart();
+}
+
+function formatCartPrice(amount) {
+    return `R${amount.toFixed(2)}`;
+}
+
+cartToggle.addEventListener("click", function () {
+    setCartOpen(cartPanel.hidden);
+});
+
+cartClose.addEventListener("click", function () {
+    setCartOpen(false);
+});
+
+cartBackdrop.addEventListener("click", function () {
+    setCartOpen(false);
+});
+
+checkoutButton.addEventListener("click", function () {
+    if (cart.size === 0) {
+        return;
+    }
+
+    const orderLines = [];
+    let total = 0;
+    cart.forEach(function (item) {
+        const subtotal = item.price * item.quantity;
+        total += subtotal;
+        orderLines.push(
+            `- ${item.name} x${item.quantity} (${formatCartPrice(item.price)} each): ${formatCartPrice(subtotal)}`
+        );
+    });
+
+    const message = [
+        "Hello, I would like to place this order:",
+        "",
+        ...orderLines,
+        "",
+        `Total: ${formatCartPrice(total)}`,
+        "",
+        "Please let me know how to proceed."
+    ].join("\n");
+    const whatsappURL = `https://wa.me/${whatsappPhoneNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank", "noopener,noreferrer");
+});
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        setCartOpen(false);
+        navMenu.classList.remove("active");
+        hamburger.classList.remove("active");
+        hamburger.setAttribute("aria-expanded", "false");
+    }
+});
+
+orderBtn.addEventListener("click", function () {
     const product = products[currentIndex];
-
-    const phoneNumber = "27713751901";
-
-    const message = 
-    `Hey,i would like this order:\n\n` +
-    `Product:${product.name}\n` +
-    `Description:${product.description}\n` +
-    `Price:R${product.price}\n\n` +
-    `Please let me know how to proceed.`;
-
-    const whatsappURL = `https://wa.me/${+27713751901}?text=${encodeURIComponent(message)}`;
-
-    window.open(whatsappURL,"_blank");
-})
+    addToCart(`print-${currentIndex}`, product);
+});
 
 let startX = 0;
 
@@ -132,7 +280,7 @@ productImage.addEventListener("pointerdown", function (event) {
     startX = event.clientX;
 });
 productImage.addEventListener("pointerup", function (event) {
-    const difference = startX -  event.clientX;
+    const difference = startX - event.clientX;
 
 
     if (difference > 50) {
@@ -205,31 +353,21 @@ prevBtn2.addEventListener("click",function(){
     showProduct2();
 
 })
-// whatsapp button
 orderBtn2.addEventListener("click",function(){
     const product2 = products2[currentIndex2];
-
-    const phoneNumber = "27713751901";
-
-    const message = 
-    `Hey,i would like this order:\n\n` +
-    `Product2:${product2.name2}\n` +
-    `Description2:${product2.description2}\n` +
-    `Price2:R${product2.price2}\n\n` +
-    `Please let me know how to proceed.`;
-
-    const whatsappURL = `https://wa.me/${+27713751901}?text=${encodeURIComponent(message)}`;
-
-    window.open(whatsappURL,"_blank");
-})
+    addToCart(`accessory-${currentIndex2}`, {
+        name: product2.name2,
+        price: product2.price2
+    });
+});
 
 let startX2 = 0;
 
 productImage2.addEventListener("pointerdown", function (event) {
-    startX2 = event.clientX2;
+    startX2 = event.clientX;
 });
 productImage2.addEventListener("pointerup", function (event) {
-    const difference2 = startX2 -  event.clientX2;
+    const difference2 = startX2 - event.clientX;
 
 
     if (difference2 > 50) {
