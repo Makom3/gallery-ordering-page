@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <meta name="description" content="Explore custom apparel, sublimation, personalised gifts, printing and graphic design services from Ayse Creative Media.">
+    <title>Our Services | Ayse Creative Media</title>
     <link rel="stylesheet" href="servicestyle.css">
 </head>
 <body>
@@ -14,12 +15,12 @@
     <div class="nav-logo">
         <h1> Ayse Creative Media</h1>
     </div>
-    <div class="hamburger">
-        <spam class="bar"></spam>
-        <spam class="bar"></spam>
-        <spam class="bar"></spam>
-    </div>
-    <ul class="nav-menu">
+    <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+    <ul class="nav-menu" id="primary-navigation">
         <li><a href="index.html"> Home </a></li>
         <li><a href="about.html"> About </a></li>
         <li><a href="gallery.html"> Gallery </a></li>
@@ -31,15 +32,59 @@
     </div>
 </div>
 
-<!-- gallery section -->
-   <div class="gallery">
-       
-        <div class="buttons">
-            <button class="prev" onclick="prevImage()">&#10094</button>
-            <button class="next" onclick="nextImage()">&#10095</button>
+<main>
+    <section class="services-hero">
+        <p class="section-eyebrow">MADE FOR YOUR MOMENTS</p>
+        <h1>Creative services, made personal.</h1>
+        <p>Whether you have a clear design or just the start of an idea, we’ll help turn it into something you can hold, wear or share.</p>
+        <a href="Order.html" class="service-cta">Tell us what you have in mind <span aria-hidden="true">&rarr;</span></a>
+    </section>
+
+    <section class="services-list" aria-labelledby="services-heading">
+        <div class="section-heading">
+            <p class="section-eyebrow">EXPLORE OUR SERVICES</p>
+            <h2 id="services-heading">A little creativity goes a long way</h2>
+            <p>Choose a service to get started. Every project is personal, so share your ideas when you place an order.</p>
         </div>
-        <img id="galleryImage" src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791805401/t-shirtprinting-img.png" alt="sublimation image">
-    </div>   
+        <div class="service-grid">
+            <article class="service-card">
+                <img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791805401/t-shirtprinting-img.png" alt="Custom printed apparel">
+                <div class="service-card-copy"><span>01</span><h3>Custom apparel</h3><p>Make a T-shirt or other apparel your own with a design that feels like you.</p><a href="Order.html">Ask about apparel <span aria-hidden="true">&rarr;</span></a></div>
+            </article>
+            <article class="service-card">
+                <img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791804949/sublimation-img.png" alt="Sublimation print example">
+                <div class="service-card-copy"><span>02</span><h3>Sublimation</h3><p>Add colourful designs to keepsakes and selected items with sublimation printing.</p><a href="Order.html">Ask about sublimation <span aria-hidden="true">&rarr;</span></a></div>
+            </article>
+            <article class="service-card">
+                <img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791804949/keyholder-img.png" alt="Personalised key holder">
+                <div class="service-card-copy"><span>03</span><h3>Personalised gifts</h3><p>Turn a useful everyday item into a thoughtful gift with a personal touch.</p><a href="Order.html">Plan a personal gift <span aria-hidden="true">&rarr;</span></a></div>
+            </article>
+            <article class="service-card">
+                <img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791804954/printout-img.png" alt="Printed artwork">
+                <div class="service-card-copy"><span>04</span><h3>Printing</h3><p>Bring your artwork or project to life with printed pieces made to share.</p><a href="Order.html">Ask about printing <span aria-hidden="true">&rarr;</span></a></div>
+            </article>
+            <article class="service-card">
+                <img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791804950/graphicdesign-img.png" alt="Graphic design example">
+                <div class="service-card-copy"><span>05</span><h3>Graphic design</h3><p>Get help shaping a visual idea into a design ready to print or share.</p><a href="Order.html">Discuss a design <span aria-hidden="true">&rarr;</span></a></div>
+            </article>
+        </div>
+    </section>
+
+    <section class="showcase" aria-labelledby="showcase-heading">
+        <div class="section-heading">
+            <p class="section-eyebrow">A LITTLE INSPIRATION</p>
+            <h2 id="showcase-heading">Take a look at what we make</h2>
+        </div>
+        <div class="gallery">
+            <div class="buttons">
+                <button class="prev" type="button" onclick="prevImage()" aria-label="Show previous example">&#10094;</button>
+                <button class="next" type="button" onclick="nextImage()" aria-label="Show next example">&#10095;</button>
+            </div>
+            <img id="galleryImage" src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791805401/t-shirtprinting-img.png" alt="Custom printed apparel">
+        </div>
+        <p class="showcase-note">Use the arrows or swipe to browse examples.</p>
+    </section>
+</main>
      <!-- Social Media -->
     <section class="socials">
         <!-- From Uiverse.io by david-mohseni --> 
@@ -90,7 +135,7 @@
 
     </section>
     <footer>
-        <p>&copy; 2023 Ayse Creative Media and Prints.
+        <p>&copy; 2026 Ayse Creative Media and Prints.
             All rights reserved.</p>
     </footer>
     <script src="script.js"></script>

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AyseCreativeMedia</title>
+    <meta name="description" content="Discover custom apparel, personalised gifts, printing and graphic design by Ayse Creative Media.">
+    <title>Ayse Creative Media | Custom Prints &amp; Personalised Gifts</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,12 +16,12 @@
     <div class="nav-logo">
         <h1> Ayse Creative Media</h1>
     </div>
-    <div class="hamburger">
-        <spam class="bar"></spam>
-        <spam class="bar"></spam>
-        <spam class="bar"></spam>
-    </div>
-    <ul class="nav-menu">
+    <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+    <ul class="nav-menu" id="primary-navigation">
         <li><a href="index.html"> Home </a></li>
         <li><a href="about.html"> About </a></li>
         <li><a href="gallery.html"> Gallery </a></li>
@@ -32,46 +33,53 @@
     </div>
 </div>
   <section class="nav-hero">
-    <p class="hero-tag">WELCOME TO AYSE CREATIVE MEDIA</p>
-
-    <h1>Bring Your Ideas to Life.</h1>
-
-    <p class="hero-description">
-        Custom printing, personalised gifts and creative designs
-        made just for you.
-    </p>
-
-    <div class="hero-buttons">
-        <a href="gallery.html" class="hero-btn primary-btn">
-            Explore Our Work
-        </a>
-
-        <a href="Order.html" class="hero-btn secondary-btn">
-            Order Here
-        </a>
+    <div class="hero-copy">
+        <p class="hero-tag">MADE PERSONAL. MADE WITH CARE.</p>
+        <h1>Bring your ideas to life.</h1>
+        <p class="hero-description">
+            Custom printing, personalised gifts and creative design —
+            thoughtful details made just for you.
+        </p>
+        <div class="hero-buttons">
+            <a href="Order.html" class="hero-btn primary-btn">Start an order</a>
+            <a href="gallery.html" class="hero-btn secondary-btn">Explore our work</a>
+        </div>
     </div>
+    <a class="hero-image" href="gallery.html" aria-label="Explore our custom apparel gallery">
+        <img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791805401/t-shirtprinting-img.png" alt="Custom printed apparel by Ayse Creative Media">
+        <span>Thoughtful creations, made for you</span>
+    </a>
 </section>
-    <!-- Content Section -->
+    <!-- Featured services -->
     <section class="content">
+        <div class="section-heading">
+            <p class="section-eyebrow">WHAT WE MAKE</p>
+            <h2>Make something meaningful</h2>
+            <p>From everyday favourites to one-of-a-kind keepsakes, find a little inspiration for your next idea.</p>
+        </div>
         <div class="content-container">
-        
         <div class="content-item">
-            <a href="gallery.html"><img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791805401/t-shirtprinting-img.png" alt="t-shirt printing image"></a>
-        </div>
-        <div class="content-item">
-            <a href="gallery.html"> <img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791804949/sublimation-img.png" alt="sublimation image"></a>
-            
+            <a href="services.html"><img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791805401/t-shirtprinting-img.png" alt="Custom printed T-shirt"><span class="service-caption"><strong>Custom apparel</strong><small>Wear your idea your way</small></span></a>
         </div>
         <div class="content-item">
-           <a href="gallery.html"> <img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791804949/keyholder-img.png" alt="keyholder image"> </a>
+            <a href="services.html"><img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791804949/sublimation-img.png" alt="Sublimation printing"><span class="service-caption"><strong>Sublimation</strong><small>Bright, lasting designs</small></span></a>
         </div>
         <div class="content-item">
-            <a href="gallery.html"><img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791804954/printout-img.png" alt="printout image"></a>
+           <a href="services.html"><img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791804949/keyholder-img.png" alt="Personalised key holder"><span class="service-caption"><strong>Personalised gifts</strong><small>Little things with meaning</small></span></a>
         </div>
         <div class="content-item">
-            <a href="gallery.html"><img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791804950/graphicdesign-img.png" alt="graphic design image"></a>
+            <a href="services.html"><img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791804954/printout-img.png" alt="Printed artwork"><span class="service-caption"><strong>Prints</strong><small>Bring your designs to paper</small></span></a>
+        </div>
+        <div class="content-item">
+            <a href="services.html"><img src="https://res.cloudinary.com/txkpxwxm/image/upload/v1791804950/graphicdesign-img.png" alt="Graphic design example"><span class="service-caption"><strong>Graphic design</strong><small>Creative ideas, made clear</small></span></a>
         </div>
         </div>
+    </section>
+    <section class="home-cta">
+        <p class="section-eyebrow">YOUR IDEA, YOUR WAY</p>
+        <h2>Have something special in mind?</h2>
+        <p>Tell us what you’re imagining and let’s make it yours.</p>
+        <a href="Order.html" class="hero-btn primary-btn">Let’s make it happen</a>
     </section>
 
     <!-- Social Media -->
@@ -123,7 +131,7 @@
 </ul>
     </section>
     <section class="footer">
-        <p>&copy; 2023 Ayse Creative Media. All rights reserved.</p>
+        <p>&copy; 2026 Ayse Creative Media. All rights reserved.</p>
     </section>
     <script src="home-script.js"></script>
 </body>
