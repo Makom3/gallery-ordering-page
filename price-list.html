@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HTV and vinyl T-shirt printing price list from Ayse Creative Media." />
+  <title>Price List | Ayse Creative Media</title>
+  <style>
+    :root{--gold:#f5bd36;--gold2:#ffd86a;--black:#080808;--panel:#111;--white:#f7f7f7;--muted:#c8c8c8;--line:#6e541c}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--black);color:var(--white);line-height:1.55}
+    a{color:inherit}
+    .page{width:min(1120px,100% - 32px);margin:auto}
+    header{padding:28px 0 22px;border-bottom:1px solid #33270d;background:radial-gradient(ellipse at top right,#302207 0%,transparent 50%)}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+    .brand{font-size:clamp(1.8rem,5vw,3rem);font-weight:900;letter-spacing:-1.8px;color:var(--gold);line-height:1}
+    .brand span{display:block;color:white;font-size:.78rem;letter-spacing:4px;font-weight:700;margin-top:8px}
+    nav{display:flex;gap:18px;flex-wrap:wrap;font-size:.9rem}
+    nav a{text-decoration:none;color:#eee}nav a:hover{color:var(--gold)}
+    .hero{padding:48px 0 34px;text-align:center}
+    .eyebrow{color:var(--gold);font-weight:800;letter-spacing:4px;text-transform:uppercase;font-size:.78rem}
+    h1{font-size:clamp(2.3rem,7vw,5rem);line-height:1.03;letter-spacing:-2px;margin:10px 0 15px;text-transform:uppercase}
+    h1 span{color:var(--gold)}
+    .hero p{max-width:720px;margin:auto;color:#ddd;font-size:1.02rem}
+    .tagline{display:inline-block;margin-top:20px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:7px 18px;color:var(--gold2);font-style:italic}
+    .layout{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:start;padding-bottom:26px}
+    .stack{display:grid;gap:20px;min-width:0}
+    .panel{background:linear-gradient(145deg,#111,#070707);border:1px solid var(--gold);border-radius:16px;overflow:hidden;box-shadow:0 0 0 1px #33270d}
+    .panel h2{background:linear-gradient(100deg,#e4a920,#ffd45d,#d69a19);color:#090909;padding:11px 16px;font-size:1.2rem;text-transform:uppercase;letter-spacing:.4px}
+    .panel-body{padding:14px}
+    .table-wrap{width:100%;overflow-x:auto}
+    table{width:100%;border-collapse:collapse;font-size:.92rem}
+    th,td{text-align:left;padding:10px 9px;border-bottom:1px solid #393939;vertical-align:top}
+    th{color:var(--gold2);text-transform:uppercase;font-size:.8rem;letter-spacing:.4px}
+    td:last-child,th:last-child{text-align:right;white-space:nowrap;color:var(--gold2);font-weight:800}
+    tr:last-child td{border-bottom:0}
+    .muted{color:var(--muted);font-size:.88rem}
+    .highlight{background:linear-gradient(90deg,#d99c18,#ffcf48);color:#090909;font-weight:900;border-radius:8px;padding:9px 11px;margin-top:10px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .profit{display:flex;justify-content:space-between;gap:12px;padding:9px 2px 0;font-size:.9rem}
+    .profit strong{color:var(--gold2)}
+    .fee{display:grid;grid-template-columns:1fr auto;gap:12px;padding:12px 2px;border-bottom:1px solid #393939;align-items:center}
+    .fee:last-of-type{border-bottom:0}
+    .fee strong{color:var(--gold2);white-space:nowrap}
+    .note-box{border:1px solid var(--gold);border-radius:12px;padding:14px;margin-top:14px}
+    .note-box h3{color:var(--gold2);font-size:1rem;text-transform:uppercase;margin-bottom:4px}
+    .discount-table td{padding:7px 8px}
+    .fineprint{font-size:.82rem;color:#ddd;font-style:italic;margin-top:12px}
+    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:22px 0 26px;border-top:1px solid #292929;border-bottom:1px solid #292929}
+    .feature{text-align:center;padding:8px;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+    .feature b{display:block;color:var(--gold);font-size:1.5rem;margin-bottom:4px}
+    footer{margin-top:24px;background:linear-gradient(100deg,#d99c18,#ffcf48,#d99c18);color:#090909;padding:25px 0}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .contact-label{text-transform:uppercase;font-size:.8rem;letter-spacing:2px;font-weight:800}
+    .phone{display:inline-block;font-size:clamp(1.7rem,4vw,2.5rem);font-weight:900;text-decoration:none;line-height:1.25}
+    .footer-brand{font-size:1.5rem;font-weight:900;font-style:italic}
+    .footer-brand small{display:block;font-size:.65rem;letter-spacing:4px;font-style:normal;text-align:center}
+    .whatsapp{display:inline-block;text-decoration:none;background:#090909;color:var(--gold2);padding:12px 17px;border-radius:999px;font-weight:800;transition:transform .2s}
+    .whatsapp:hover{transform:translateY(-2px)}
+    .disclaimer{text-align:center;color:#aaa;font-size:.78rem;padding:16px 0 22px}
+    @media(max-width:800px){.layout{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}nav{gap:12px}.hero{padding-top:36px}}
+    @media(max-width:480px){.page{width:min(100% - 20px,1120px)}header{padding-top:20px}.topbar{align-items:flex-start}.brand span{letter-spacing:2px}.hero p{font-size:.95rem}.panel h2{font-size:1.05rem}.panel-body{padding:10px}th,td{padding:9px 6px;font-size:.82rem}.fee{font-size:.88rem}.features{gap:5px}.feature{font-size:.7rem}.footer-inner{justify-content:center;text-align:center}.footer-brand{width:100%}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="page topbar">
+      <a href="#top" class="brand" style="text-decoration:none">Ayse<span>CREATIVE MEDIA</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#printing">Printing prices</a><a href="#design">Design fees</a><a href="#bulk">Bulk discounts</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="page">
+    <section class="hero">
+      <div class="eyebrow">Your Vision · Our Prints</div>
+      <h1>T-Shirt <span>Printing</span><br>Price List</h1>
+      <p>High-quality HTV / vinyl printing on your T-shirt. <strong>You supply the shirt — we bring your design to life.</strong> Clean, durable and long-lasting prints.</p>
+      <div class="tagline">Print · Design · Create</div>
+    </section>
+
+    <div class="layout">
+      <div class="stack">
+        <section class="panel" id="printing">
+          <h2>Printing prices</h2>
+          <div class="panel-body table-wrap">
+            <table>
+              <thead><tr><th>Service / size</th><th>Price (R)</th></tr></thead>
+              <tbody>
+                <tr><td>Small name or text <span class="muted">(up to 10 cm)</span></td><td>35–50</td></tr>
+                <tr><td>Pocket-size logo or design</td><td>40–60</td></tr>
+                <tr><td>Medium front design <span class="muted">(up to 20 cm)</span></td><td>60–85</td></tr>
+                <tr><td>Large front design <span class="muted">(up to 25–28 cm)</span></td><td>80–120</td></tr>
+                <tr><td>Name and number on the back</td><td>50–80</td></tr>
+                <tr><td>Front and back printing</td><td>100–160</td></tr>
+                <tr><td>Glitter or specialty vinyl</td><td>+15–40</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel" id="costs">
+          <h2>Estimated cost &amp; profit <span style="font-size:.72em">(medium front print)</span></h2>
+          <div class="panel-body table-wrap">
+            <table>
+              <thead><tr><th>Item</th><th>Cost (R)</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td>Vinyl allowance</td><td>15–30</td><td class="muted">Depends on design size</td></tr>
+                <tr><td>Cutting blade &amp; machine wear</td><td>3–6</td><td class="muted">Per job</td></tr>
+                <tr><td>Weeding &amp; pressing supplies</td><td>3–6</td><td class="muted">Heat press, tools, etc.</td></tr>
+                <tr><td>Labour allowance</td><td>20–30</td><td class="muted">Your time &amp; skill</td></tr>
+                <tr><td>Electricity &amp; overhead</td><td>3–6</td><td class="muted">Power and business costs</td></tr>
+              </tbody>
+            </table>
+            <div class="highlight"><span>Estimated total cost</span><span>R44–R78</span></div>
+            <div class="highlight"><span>Recommended customer price</span><span>R80–R120</span></div>
+            <div class="profit"><span>Estimated profit per shirt</span><strong>R35–R50</strong></div>
+            <p class="muted" style="margin-top:10px">Costs and profit are estimates. Your actual profit depends on vinyl use, design complexity and time spent.</p>
+          </div>
+        </section>
+      </div>
+
+      <div class="stack">
+        <section class="panel" id="design">
+          <h2>Design fees</h2>
+          <div class="panel-body">
+            <div class="fee"><span>Simple text design<br><span class="muted">Name, slogan, etc.</span></span><strong>R30–R50</strong></div>
+            <div class="fee"><span>Custom design<br><span class="muted">Created from scratch</span></span><strong>R80–R200+</strong></div>
+            <div class="fee"><span>Artwork cleanup or tracing</span><strong>R30–R100</strong></div>
+            <div class="note-box"><h3>Custom designs welcome</h3><p>Your idea, our creativity. We bring your vision to life!</p></div>
+          </div>
+        </section>
+
+        <section class="panel" id="bulk">
+          <h2>Bulk discounts</h2>
+          <div class="panel-body">
+            <table class="discount-table">
+              <tbody>
+                <tr><td>1 shirt</td><td>R70</td></tr>
+                <tr><td>2–5 shirts</td><td>R60–R65 each</td></tr>
+                <tr><td>6–10 shirts</td><td>R50–R60 each</td></tr>
+                <tr><td>11+ shirts</td><td>Request a quote</td></tr>
+              </tbody>
+            </table>
+            <p class="fineprint">Discounts apply when the same design is used and saves time. Large prints, multiple colours or intricate designs are quoted separately. Design fees may be extra.</p>
+          </div>
+        </section>
+        <section class="panel">
+          <h2>Why choose us?</h2>
+          <div class="panel-body">
+            <p>✦ Quality vinyl materials</p><p>✦ Fast and reliable service</p><p>✦ Custom designs welcome</p><p>✦ Great prices and great results</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="features" aria-label="Our promises">
+      <div class="feature"><b>◇</b>High-quality<br>vinyl materials</div>
+      <div class="feature"><b>◷</b>Fast &amp; reliable<br>service</div>
+      <div class="feature"><b>✧</b>Custom designs<br>welcome</div>
+      <div class="feature"><b>✦</b>Great prices<br>&amp; great results</div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="page footer-inner">
+      <div><div class="contact-label">Contact us / WhatsApp</div><a class="phone" href="https://wa.me/27713751901?text=Hi%20Ayse%20Creative%20Media%2C%20I%27d%20like%20a%20T-shirt%20printing%20quote.">071 375 1901</a></div>
+      <div class="footer-brand">Ayse Creative Media<small>PRINT · DESIGN · CREATE</small></div>
+      <a class="whatsapp" href="https://wa.me/27713751901?text=Hi%20Ayse%20Creative%20Media%2C%20I%27d%20like%20a%20T-shirt%20printing%20quote." target="_blank" rel="noopener">Message us on WhatsApp ↗</a>
+    </div>
+  </footer>
+  <div class="page disclaimer">Prices are in South African rand (R). The customer supplies the T-shirt. Final quotes may vary by artwork, print size and quantity.</div>
+</body>
+</html>

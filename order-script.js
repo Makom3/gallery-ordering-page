@@ -376,3 +376,78 @@ productImage2.addEventListener("pointerup", function (event) {
         prevBtn2.click();
     }
 }); 
+
+
+// graphic design 
+
+const products3 = [
+    {
+        image3:"https://res.cloudinary.com/txkpxwxm/image/upload/v1793044400/graphic-design-logo.png",
+        name3:"Logo Design",
+        description3:"Creating logo from scratch",
+        price3: 150
+    },
+    {
+        image3:"https://res.cloudinary.com/txkpxwxm/image/upload/v1793044402/graphic-design-poster.png",
+        name3:"Poser Design",
+        description3:"Invitation card, Event Poster etc..",
+        price3: 150
+    }, 
+    
+];
+
+let currentIndex3 = 0;
+
+const productImage3= document.querySelector("#product-image3");
+const productName3= document.querySelector("#product-name3");
+const productDescription3= document.querySelector("#product-description3");
+const productPrice3= document.querySelector("#product-price3");
+
+const nextBtn3 = document.querySelector("#next-btn3");
+const prevBtn3 = document.querySelector("#prev-btn3");
+const orderBtn3 = document.querySelector(".order-btn3");
+
+function showProduct3(){
+   const product3 = products3[currentIndex3];
+
+   productImage3.src = product3.image3;
+   productName3.textContent = product3.name3;
+   productDescription3.textContent = product3.description3;
+   productPrice3.textContent = `R${product3.price3}`;
+}
+
+//next button
+nextBtn3.addEventListener("click",function(){
+    currentIndex3 = (currentIndex3 + 1) % products3.length;
+    showProduct3();
+});
+
+//previous button
+prevBtn3.addEventListener("click",function(){
+    currentIndex3=(currentIndex3 - 1 + products3.length )%products3.length;
+    showProduct3();
+
+})
+orderBtn3.addEventListener("click",function(){
+    const product3 = products3[currentIndex3];
+    addToCart(`accessory-${currentIndex3}`, {
+        name: product3.name3,
+        price: product3.price3
+    });
+});
+
+let startX3 = 0;
+
+productImage3.addEventListener("pointerdown", function (event) {
+    startX3 = event.clientX3;
+});
+productImage3.addEventListener("pointerup", function (event) {
+    const difference3 = startX3 - event.clientX3;
+
+
+    if (difference3 > 50) {
+        nextBtn3.click();
+    } else if (difference3 < -50) {
+        prevBtn3.click();
+    }
+}); 
