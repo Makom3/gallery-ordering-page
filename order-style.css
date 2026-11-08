@@ -208,6 +208,9 @@ a,h1{
     border: 2px solid rgb(173, 83, 83);
     gap: 20px;
 }
+.gallery-item #product-image4{
+    background-color: #ffffff;
+}
 /* Product information */
 .product-info{
     width: 100%;

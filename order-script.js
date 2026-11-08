@@ -451,3 +451,101 @@ productImage3.addEventListener("pointerup", function (event) {
         prevBtn3.click();
     }
 }); 
+
+// shoes design 
+
+const products4 = [
+    {
+        image4:"https://res.cloudinary.com/txkpxwxm/image/upload/v1794140006/shoe03.jpg",
+        name4:"Shoe Branding",
+        description4:"Brand you sneakers/boots with small details",
+        price4: 50
+    },
+    {
+        image4:"https://res.cloudinary.com/txkpxwxm/image/upload/v1794140011/shoe02.jpg",
+        name4:"Shoe Branding",
+        description4:"Brand you sneakers/boots with small details",
+        price4: 50
+    }, 
+    {
+        image4:"https://res.cloudinary.com/txkpxwxm/image/upload/v1794140013/shoe01.jpg",
+        name4:"Shoe Branding",
+        description4:"Brand you sneakers/boots with small details",
+        price4: 50
+    },
+    {
+        image4:"https://res.cloudinary.com/txkpxwxm/image/upload/v1794140023/shoe04.jpg",
+        name4:"Shoe Branding",
+        description4:"Brand you sneakers/boots with small details",
+        price4: 50
+    }, 
+    {
+        image4:"https://res.cloudinary.com/txkpxwxm/image/upload/v1794140019/shoe06.jpg",
+        name4:"Shoe Branding",
+        description4:"Brand you sneakers/boots with small details",
+        price4: 50
+    },
+    {
+        image4:"https://res.cloudinary.com/txkpxwxm/image/upload/v1794140023/shoe07.jpg",
+        name4:"Shoe Branding",
+        description4:"Brand you sneakers/boots with small details",
+        price4: 50
+    }, 
+    
+];
+
+let currentIndex4 = 0;
+
+const productImage4= document.querySelector("#product-image4");
+const productName4= document.querySelector("#product-name4");
+const productDescription4= document.querySelector("#product-description4");
+const productPrice4= document.querySelector("#product-price4");
+
+const nextBtn4 = document.querySelector("#next-btn4");
+const prevBtn4 = document.querySelector("#prev-btn4");
+const orderBtn4 = document.querySelector(".order-btn4");
+
+function showProduct4(){
+   const product4 = products4[currentIndex4];
+
+   productImage4.src = product4.image4;
+   productName4.textContent = product4.name4;
+   productDescription4.textContent = product4.description4;
+   productPrice4.textContent = `R${product4.price4}`;
+}
+
+//next button
+nextBtn4.addEventListener("click",function(){
+    currentIndex4 = (currentIndex4 + 1) % products4.length;
+    showProduct4();
+});
+
+//previous button
+prevBtn4.addEventListener("click",function(){
+    currentIndex4=(currentIndex4 - 1 + products4.length )%products4.length;
+    showProduct4();
+
+})
+orderBtn4.addEventListener("click",function(){
+    const product4 = products4[currentIndex4];
+    addToCart(`shoe-branding-${currentIndex4}`, {
+        name: product4.name4,
+        price: product4.price4
+    });
+});
+
+let startX4 = 0;
+
+productImage4.addEventListener("pointerdown", function (event) {
+    startX4 = event.clientX;
+});
+productImage4.addEventListener("pointerup", function (event) {
+    const difference4 = startX4 - event.clientX;
+
+
+    if (difference4 > 50) {
+        nextBtn4.click();
+    } else if (difference4 < -50) {
+        prevBtn4.click();
+    }
+}); 
