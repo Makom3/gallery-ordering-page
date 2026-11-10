@@ -24,3 +24,16 @@ document.addEventListener('keydown', function (event) {
         closeNavigation();
     }
 });
+
+const heroSlides = document.querySelectorAll('.hero-image .hero-slide');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (heroSlides.length > 1 && !prefersReducedMotion.matches) {
+    let activeHeroSlide = 0;
+
+    window.setInterval(function () {
+        heroSlides[activeHeroSlide].classList.remove('active');
+        activeHeroSlide = (activeHeroSlide + 1) % heroSlides.length;
+        heroSlides[activeHeroSlide].classList.add('active');
+    }, 3500);
+}

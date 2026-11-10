@@ -85,7 +85,7 @@ ul {
 
 .nav-logo {
     color: var(--ayse-white);
-    font-size: clamp(20px, 2.5vw, 30px);
+    /* font-size: clamp(20px, 2.5vw, 30px); */
     font-weight: bold;
     white-space: normal;
     line-height: 1.2;
@@ -667,6 +667,25 @@ ul {
     color: #fff;
     font-size: 14px;
     font-weight: 700;
+}
+
+.hero-image .hero-slide {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 0.5s ease;
+}
+
+.hero-image .hero-slide.active {
+    opacity: 1;
+}
+
+.hero-image:hover .hero-slide.active {
+    transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-image .hero-slide {
+        transition: none;
+    }
 }
 
 .content {
